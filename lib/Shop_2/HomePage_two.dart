@@ -3,6 +3,7 @@ import 'package:shopapp/Shop_2/Category_Products.dart';
 import 'package:shopapp/Shop_2/Custom%20Widgets/Best_Sell_Widget.dart';
 import 'package:shopapp/Shop_2/Custom%20Widgets/Product_Widget.dart';
 import 'package:shopapp/Shop_2/Custom%20Widgets/categoriy_items.dart';
+import 'package:shopapp/Shop_2/Custom%20Widgets/homeProduct.dart';
 
 class HomePageTwo extends StatefulWidget {
   const HomePageTwo({Key? key}) : super(key: key);
@@ -65,34 +66,47 @@ class _HomePageTwoState extends State<HomePageTwo> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      height: 45,
-                      width: 300,
-                      child: TextField(
-                        decoration: InputDecoration(
-                            hintText: "Search...",
-                            hintStyle: const TextStyle(
-                              fontSize: 15,
-                            ),
-                            prefixIcon: const Icon(
-                              Icons.search,
-                              color: Colors.black,
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10))),
+                    Expanded(
+                      flex: 5,
+                      child: Container(
+                        height: 45,
+                        width: 290,
+                        child: TextField(
+                          decoration: InputDecoration(
+                              hintText: "Search...",
+                              hintStyle: const TextStyle(
+                                fontSize: 15,
+                              ),
+                              prefixIcon: const Icon(
+                                Icons.search,
+                                color: Colors.black,
+                              ),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10))),
+                        ),
                       ),
                     ),
-                    Container(
-                      height: 30,
-                      width: 30,
-                      child: const Icon(
-                        Icons.filter_list,
-                        size: 20,
-                        color: Colors.black,
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: 30,
+                          width: 25,
+                          child: const Icon(
+                            Icons.filter_list,
+                            size: 25,
+                            color: Colors.black,
+                          ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border:
+                                  Border.all(width: 1, color: Colors.black)),
+                        ),
                       ),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(width: 1, color: Colors.black)),
                     )
                   ],
                 ),
@@ -184,27 +198,22 @@ class _HomePageTwoState extends State<HomePageTwo> {
                   physics: BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   children: const [
-                    ProductWidget(
+                    HomeProduct(
                         title: "Suit grey",
                         category: "Clothes",
                         discount: 500,
                         price: 5000),
-                    ProductWidget(
+                    HomeProduct(
                         title: "Suit grey",
                         category: "Clothes",
                         discount: 500,
                         price: 5000),
-                    ProductWidget(
+                    HomeProduct(
                         title: "Suit grey",
                         category: "Clothes",
                         discount: 500,
                         price: 5000),
-                    ProductWidget(
-                        title: "Suit grey",
-                        category: "Clothes",
-                        discount: 500,
-                        price: 5000),
-                    ProductWidget(
+                    HomeProduct(
                         title: "Suit grey",
                         category: "Clothes",
                         discount: 500,
